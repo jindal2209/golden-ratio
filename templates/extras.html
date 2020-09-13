@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div id='extras_content'>
+    <div id='extras_header'>
+        <h2 style="text-decoration: underline;">
+            Using python to create golden-ratio patterns.
+        </h2>
+        <p>
+            <br>
+            We will use python turtle library to implement this. <br>
+            To know more about <b>python</b> <a href="https://www.python.org/" target="blank">click here.</a> <br>
+            To know about <b>turtle</b> <a href="https://docs.python.org/3/library/turtle.html" target="blank">click here.</a> <br>
+            Click on any of the following item and click the run button to see final results. <br>
+            If you want you can also edit the code and try to make your own turtles and patterns. <br>
+            <strong>Enjoy!!</strong>
+        </p>
+    </div>
+    <center>
+    <div id='list_container'>
+        <ul id='extras_content_list'>
+        <a data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+        <li>
+            Fibonacci
+            <div class="collapse multi-collapse" id="multiCollapseExample1">
+                <div class="card card-body">
+                    <br>
+                    <iframe src="https://trinket.io/embed/python/2f4952e1e8" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                    <br><br><br>
+                </div>
+            </div>
+        </li>
+        </a>
+        <a data-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">
+        <li>
+            Spiral
+            <div class="collapse multi-collapse" id="multiCollapseExample2">
+                <div class="card card-body">
+                    <br>
+                    <iframe src="https://trinket.io/embed/python/ce671bad4f" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                    <br><br><br>
+                </div>
+            </div>
+        </li>
+        </a>
+        <a data-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="false" aria-controls="multiCollapseExample3">
+        <li>
+            Circle
+            <div class="collapse multi-collapse" id="multiCollapseExample3">
+                <div class='card card-body'>
+                    <br>
+                    <iframe src="https://trinket.io/embed/python/bb5246bdc2" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                    <br><br><br>
+                </div>
+            </div>
+        </li>
+        </a>
+        <a data-toggle="collapse" href="#multiCollapseExample4" role="button" aria-expanded="false" aria-controls="multiCollapseExample4">
+        <li>
+            Flower
+            <div class="collapse multi-collapse" id="multiCollapseExample4">
+                <div class="card card-body">
+                    <br>
+                    <iframe src="https://trinket.io/embed/python/bc14123c9e" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                    <br><br><br>
+                </div>
+            </div>
+        </li>
+        </a>
+        <a data-toggle="collapse" href="#multiCollapseExample5" role="button" aria-expanded="false" aria-controls="multiCollapseExample5">
+        <li>
+            Flower1
+            <div class="collapse multi-collapse" id="multiCollapseExample5">
+                <div class="card card-body">
+                    <br>
+                    <iframe src="https://trinket.io/embed/python/fdb86de6c1" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                    <br><br><br>    
+                </div>
+            </div>
+        </li>
+        </a>
+        <a data-toggle="collapse" href="#multiCollapseExample6" role="button" aria-expanded="false" aria-controls="multiCollapseExample6">
+        <li>
+            Starfish
+            <div class="collapse multi-collapse" id="multiCollapseExample6">
+                <div class='card card-body'>
+                    <br>
+                    <iframe src="https://trinket.io/embed/python/0935fcef79" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                    <br><br><br>
+                </div>
+            </div>
+        </li>
+        </a>
+    </ul>
+    </div>
+    </center>
+</div>
+
+{% load static %}
+<script type="text/javascript" src="{% static 'base.js' %}"></script>
+
+{% endblock %}

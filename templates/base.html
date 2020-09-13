@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+    <title>Golden-Ratio</title>
+    <link rel="icon" href="{% static 'logo.png' %}">
+</head>
+<body>
+
+
+  <!-- <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top" id='navbar'>
+    <a class="navbar-brand" href="{% url 'home' %}" id="logo"><img src="{% static 'logo.png' %}" width="150" height="150"alt="LOGO"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        {% ifnotequal request.path '/' %}
+          {% ifnotequal request.path '/extras' %}
+            <li class='nav-item' id='navbar-right'>
+              <a href="{% url 'extras' %}">Extras</a>
+            </li>
+          {% else %}
+            <li class='nav-item' id='navbar-right'>
+              <a href="{% url 'examples' %}">Examples</a>
+            </li>
+          {% endifnotequal %}
+        {% else %}
+          <li class='nav-item' id='navbar-right'>
+            <a href="{% url 'extras' %}">Extras</a>
+          </li>
+          <li class='nav-item' id='navbar-right'>
+            <a href="{% url 'examples' %}">Examples</a>
+          </li>
+        {% endifnotequal %}
+      </ul>
+    </div>
+  </nav> -->
+
+  <div class="nav">
+    {% include 'navbar.html' %}
+  </div>
+  <br><br><br>
+
+  {% block content %}
+  {% endblock %}   
+
+</body>
+  
+<footer class="page-footer">
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright
+      <br>
+      All the images used are for representation purpose only and not for any marketing purpose.
+      <br>
+      Shubham Jindal
+      <br>
+      <a href="http:\\jindal2209.github.io/mysite" target="_blank">My pesonal website</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+  
+{% load static %}
+<script type="text/javascript" src="{% static 'base.js' %}"></script>
+  
+</html>

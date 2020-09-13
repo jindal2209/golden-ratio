@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'examples.css' %}">
+<div id="main_content">
+    <div class="btn-group" style="float: left; position: sticky; top: 0%;">
+        <button type="button" class="btn btn-danger btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Filter Objects
+        </button>
+        <div class="dropdown-menu">
+        <a class="dropdown-item" onclick="filterfunc('Architecture')">Architecture</a>
+        <a class="dropdown-item" onclick="filterfunc('Flower_Plants')">Flower_Plants</a>
+        <a class="dropdown-item" onclick="filterfunc('Fruits_Vegetables')">Fruits_Vegetables</a>
+        <a class="dropdown-item" onclick="filterfunc('Humans')">Humans</a>
+        <a class="dropdown-item" onclick="filterfunc('Logos')">Logos</a>
+        <a class="dropdown-item" onclick="filterfunc('Nature')">Nature</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" onclick="filterfunc('all')">Show All</a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <h1 id='page_header'>
+        Examples and applications of golden ratio in everyday life.
+    </h1>
+    <br><br>
+    <div id='Architecture' class='content_header Architecture'>
+        <h2>Architecture</h2><br>
+        {% for d in data %}
+        {% ifequal d.image_type "Architecture" %}
+        <div id='ex'>
+            <h5>{{d.image_title}}</h5>
+            <img src="{{ d.image.url }}" alt="{{d.image_title}}" height="25%" width="25%"> 
+            <br>
+            {{d.description}}
+        </div>
+        <br><br>
+        {% endifequal %}
+        {% endfor %}
+    </div>
+    <div id='Flower_Plants'  class='content_header Flower_Plants'>
+        <h2>Flowers and Plants</h2><br>
+        {% for d in data %}
+        {% ifequal d.image_type "Flower_Plants" %}
+        <div id='ex'>
+            <h5>{{d.image_title}}</h5>
+            <img src="{{ d.image.url }}" alt="{{d.image_title}}" height="25%" width="25%"> 
+            <br>
+            {{d.description}}
+        </div>
+        <br><br>
+        {% endifequal %}
+        {% endfor %}
+    </div>
+    <div id='Fruits_Vegetables'  class='content_header Fruits_Vegetables'>
+        <h2>Fruits and Vegetables</h2><br>
+        {% for d in data %}
+        {% ifequal d.image_type "Fruits_Vegetables" %}
+        <div id='ex'>
+            <h5>{{d.image_title}}</h5>
+            <img src="{{ d.image.url }}" alt="{{d.image_title}}" height="25%" width="25%"> 
+            <br>
+            {{d.description}}
+        </div>
+        <br><br>
+        {% endifequal %}
+        {% endfor %}
+    </div>
+    <div id='Humans'  class='content_header Humans'>
+        <h2>Humans</h2><br>
+        {% for d in data %}
+        {% ifequal d.image_type "Humans" %}
+        <div id='ex'>
+            <h5>{{d.image_title}}</h5>
+            <img src="{{ d.image.url }}" alt="{{d.image_title}}" height="25%" width="25%"> 
+            <br>
+            {{d.description}}
+        </div>
+        <br><br>
+        {% endifequal %}
+        {% endfor %}
+    </div>
+    <div id='Logos'  class='content_header Logos row'>
+        <h2>Logos</h2><br>
+        <div class='column'>
+            {% for d in data %}
+            {% ifequal d.image_type "Logos" %}
+                <img src="{{ d.image.url }}" alt="{{d.image_title}}" height="25%" width="25%"> 
+            {% endifequal %}
+            {% endfor %}
+        </div>
+    </div>
+    <div id='Nature'  class='content_header Nature'>
+        <h2>Nature</h2><br>
+        {% for d in data %}
+        {% ifequal d.image_type "Nature" %}
+        <div id='ex'>
+            <h5>{{d.image_title}}</h5>
+            <img src="{{ d.image.url }}" alt="{{d.image_title}}" height="25%" width="25%"> 
+            <br>
+            {{d.description}}
+        </div>
+        <br><br>
+        {% endifequal %}
+        {% endfor %}
+    </div>
+</div>
+
+{% load static %}
+<script src="{% static 'examples.js' %}"></script>
+
+
+{% endblock %}
+

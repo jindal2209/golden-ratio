@@ -1,0 +1,170 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  /* padding: 1%; */
+  background-image: url('sunflower.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#buttong{
+  background-color: rgb(236, 102, 102); /* Green */
+  border: 2px solid red;
+  border-radius: 5px;
+  color: white;
+  padding: 1%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+section{
+  padding: 1%;
+}
+
+#main {
+  width: 100%;
+  /* height: 100vh; */
+  /* padding: 3%; */
+  /* border-bottom:  2px dotted red; */
+}
+
+.bottom:hover{
+  background-color: rgba(250, 194, 194, 0.315);
+  transition: 0.3s;
+}
+
+.centerText {
+  text-align: center;
+  font-size: 140px;
+  top: 50%;
+  left: 50%;
+  text-decoration: underline;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
+  color: rgb(209, 7, 7);
+  font-family: 'Pacifico', cursive;
+}
+
+.subhead {
+  text-align: center;
+  text-decoration: underline;
+  color: rgb(209, 7, 7);
+  font-family: 'Pacifico', cursive;
+  font-size: 20px;
+}
+
+.page-footer {
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  margin-top: 200px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 3px;
+}
+
+.content {
+  color: red;
+  font-size: larger;
+}
+
+.heading {
+  text-decoration: underline;
+  color: rgb(209, 7, 7);
+  font-family: 'Pacifico', cursive;
+}
+
+.sliderouter {
+  margin: auto;
+}
+
+.sliderinner {
+  background-color: rgba(250, 194, 194, 0.315);
+  width: 35%;
+  padding: 1%;
+  text-align: center;
+  margin: auto;
+  border: 2px solid red;
+}
+#achieved{
+  display: none;
+  color: rgb(248, 226, 103);
+  text-shadow: 2px 2px red;
+}
+
+#square{
+  background-color: rgb(236, 102, 102);
+  width: 380.23px;
+  height: 380.23px;
+  /* height: 200px;  for golden ratio*/
+  border: 2px solid red;
+}
+
+
+#slider{
+  -webkit-appearance: none;
+  width: 80%;
+  height: 15px;
+  border-radius: 5px;  
+  background: #ff7c7c;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.sliderinner input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #e43415;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.sliderinner input[type=range]::-moz-range-thumb{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #f03a3a;
+  cursor: pointer;
+}
+
+@media(max-width: 524px) {
+  .centerText {
+      text-align: center;
+      color: rgb(209, 7, 7);
+      font-size: 70px;
+      top: 50%;
+      left: 50%;
+  }
+
+  .sliderinner {
+    width: 100%;
+  }
+
+  #square{
+    width: 80vw;
+    height: 80vw;
+  }
+
+  #gifimg{
+    height: 100%;
+    width: 100%;
+  }
+
+}
